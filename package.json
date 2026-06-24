@@ -22,7 +22,7 @@
     "pwa:build": "vite build",
     "pwa:preview": "vite preview --port 4173",
     "icons:generate": "node scripts/generate-icons.mjs",
-    "deploy": "cross-env VITE_BASE_URL=/studious-ai/ vite build && gh-pages -d dist",
+    "deploy": "cross-env VITE_BASE_URL=/Studious-AI/ vite build && gh-pages -d dist",
     "start": "node dist/server.cjs",
     "clean": "rm -rf dist dist-electron",
     "lint": "tsc --noEmit"

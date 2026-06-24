@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <title>Studious AI — Student Study Workspace</title>
+    <meta name="description" content="AI-powered student study workspace with notes, drawing, flashcards and a built-in browser." />
+    <meta name="theme-color" content="#5a5a40" />
+
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/studious-ai/manifest.json" />
+
+    <!-- iOS PWA support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Studious AI" />
+    <link rel="apple-touch-icon" href="/studious-ai/icons/icon-192.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/studious-ai/icons/icon-96.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Studious AI" />
+    <meta property="og:description" content="AI-powered student study workspace" />
+    <meta property="og:type" content="website" />
+    <script type="module" crossorigin src="/studious-ai/assets/index-C1fbikW7.js"></script>
+    <link rel="stylesheet" crossorigin href="/studious-ai/assets/index-OFyFcP9f.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Register Service Worker for PWA -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>

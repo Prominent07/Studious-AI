@@ -22,6 +22,7 @@
     "pwa:build": "vite build",
     "pwa:preview": "vite preview --port 4173",
     "icons:generate": "node scripts/generate-icons.mjs",
+    "deploy": "cross-env VITE_BASE_URL=/studious-ai/ vite build && gh-pages -d dist",
     "start": "node dist/server.cjs",
     "clean": "rm -rf dist dist-electron",
     "lint": "tsc --noEmit"
@@ -54,6 +55,7 @@
     "electron": "^34.0.0",
     "electron-builder": "^25.0.0",
     "esbuild": "^0.25.0",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.40",
     "sharp": "^0.33.5",
     "tailwindcss": "^3.4.4",
